@@ -1,0 +1,26 @@
+<footer class="bg-dark text-center text-lg-start py-1">
+
+    <div class="text-center p-3 m-4" style="background-color: rgb(14, 43, 95);" *ngIf="ocultar; else ModalComponent">
+        <button class="button" (click)='openModal()'>Ultimo Mensaje</button>
+    </div>
+
+    <ng-template #ModalComponent class="modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Ayuda</h5>
+                  <button type="button" class="btn-close" (click)='ocultar = true' data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p>Olvide valorar las 3 primeras clases (new in CoderHouse)</p>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+
+    <div class="text-center p-3 m-4" style="background-color: rgb(14, 43, 95);">
+      © Integrando Conocimientos:
+      <a  href="https://www.coderhouse.com.pe/">Desafio N2</a>
+    </div>
+    
+</footer>

@@ -1,0 +1,43 @@
+<div style="margin-top: 25px; margin-left: 50px; margin-right: 50px;">
+    <table *ngIf='alumnos' class="table table-dark table-hover table-striped">
+        <thead>
+            <tr>
+                <th [width]='200'>Alumno</th>
+                <th [width]='100'>Abono</th>
+                <th [width]='100'>Deuda</th>
+                <th [width]='350'>Fecha</th>
+                <th [width]='350'>Resaltar</th>
+                <th [width]='150'>Informar</th>
+                <th [width]='100'>Indice</th>
+            </tr>
+        </thead>
+        <tbody style="overflow: auto">
+            <tr *ngFor='let indicador of alumnos; let i = index' [ngClass]="pintado[i] ? 'active' : ''">
+            <!-- este tambien funciona igual solo que style.back-->
+            <!-- <tr *ngFor='let indicador of alumnos; let i = index' [style.background-color]="pintado[i] ? '#607D8B !important' : ''"> -->
+                <td>
+                    {{indicador.name | uppercase}}
+                </td>
+                <td>
+                    {{indicador.payment | currency: 'EUR' }}
+                </td>
+                <td>
+                    {{indicador.debt | currency: 'EUR' }}
+                </td>
+                <td>
+                    {{ indicador.created | date:'yyyy/MM/dd' }}
+                </td>
+                <td>
+                    <button (click)='pintar(i)' class="button">Pintar</button>
+                </td>
+
+                <td>
+                    <button (click)='mostrar(i)' class="button">Mostrar</button>
+                </td>
+                <td>
+                    {{i}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

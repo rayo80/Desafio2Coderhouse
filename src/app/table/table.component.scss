@@ -1,0 +1,25 @@
+.button {
+    font-size: 14px;
+    height: 30px;
+    width: 85px;
+    background-color: #0D47A1;
+    border-radius: 50px;
+    border: 0px;
+    border-color: #0D47A1;
+    text-align: center;
+    color: white;
+}
+
+.button:hover {
+    outline: none;
+    box-shadow: none;
+    background-color:rgb(14, 43, 95);
+}
+
+tr{
+    vertical-align: baseline;
+}
+
+.active{
+    background-color: #607D8B !important;
+}
