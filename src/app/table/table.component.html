@@ -12,20 +12,20 @@
             </tr>
         </thead>
         <tbody style="overflow: auto">
-            <tr *ngFor='let indicador of alumnos; let i = index' [ngClass]="pintado[i] ? 'active' : ''">
-            <!-- este tambien funciona igual solo que style.back-->
-            <!-- <tr *ngFor='let indicador of alumnos; let i = index' [style.background-color]="pintado[i] ? '#607D8B !important' : ''"> -->
+            <tr *ngFor='let alumno of alumnos; let i = index' [ngClass]="pintado[i] ? 'active' : ''">
+            <!-- este tambien funciona igual solo que cambia style.back-->
+            <!-- <tr *ngFor='let alumno of alumnos; let i = index' [style.background-color]="pintado[i] ? '#607D8B !important' : ''"> -->
                 <td>
-                    {{indicador.name | uppercase}}
+                    {{alumno.name | uppercase}}
                 </td>
                 <td>
-                    {{indicador.payment | currency: 'EUR' }}
+                    {{alumno.payment | currency: 'EUR' }}
                 </td>
                 <td>
-                    {{indicador.debt | currency: 'EUR' }}
+                    {{alumno.debt | currency: 'EUR' }}
                 </td>
                 <td>
-                    {{ indicador.created | date:'yyyy/MM/dd' }}
+                    {{alumno.created | date:'yyyy/MM/dd' }}
                 </td>
                 <td>
                     <button (click)='pintar(i)' class="button">Pintar</button>

@@ -21,9 +21,9 @@ export class TableComponent implements OnInit {
       created: "2020-04-01"
     },
     {
-      name: 'Juan',
+      name: 'Erick',
       payment: 1500,
-      debt: 200,
+      debt: 100,
       created: "2021-08-03"
     },
     {
